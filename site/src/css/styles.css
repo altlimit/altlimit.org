@@ -1,0 +1,204 @@
+:root {
+    --primary: #059669;
+    --dark: #1e293b;
+    --light: #ffffff;
+    --bg-muted: #f9fafb;
+    --text-main: #334155;
+    --text-muted: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.7;
+    color: var(--text-main);
+    background-color: var(--light);
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Remove the old .logo class styles and add this */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Hero Section */
+header {
+    padding: 100px 8%;
+    text-align: center;
+    background: radial-gradient(circle at top right, #ecfdf5, #ffffff);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    color: var(--text-muted);
+}
+
+/* Mission Bar */
+.mission-bar {
+    background: var(--dark);
+    color: white;
+    padding: 4rem 8%;
+    text-align: center;
+}
+
+.mission-bar h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+.section-padding {
+    padding: 80px 8%;
+}
+
+.section-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--bg-muted);
+    padding: 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f0fdf4;
+    text-align: center;
+    padding: 100px 8%;
+    border-radius: 40px;
+    margin: 0 4% 80px;
+}
+
+.contact-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email-link {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    word-break: break-all;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 60px 8% 40px;
+    border-top: 1px solid #f1f5f9;
+    text-align: center;
+}
+
+.commercial-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.commercial-link:hover {
+    background: var(--dark);
+    color: white;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 60px 5%;
+    }
+
+    .section-padding {
+        padding: 60px 5%;
+    }
+
+    .contact-section {
+        margin: 0 0 60px;
+        border-radius: 0;
+    }
+}
