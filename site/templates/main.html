@@ -4,44 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>altlimit | Humanitarian Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>{{if .title}}{{.title}} | {{end}}altlimit</title>
+    <meta name="description"
+        content="{{if .description}}{{.description}}{{else}}Empowering communities worldwide through compassion, action, and sustainable support.{{end}}">
+    <meta name="keywords"
+        content="non-profit, humanitarian, charity, sustainable development, education, health, disaster relief, equality">
+    <meta name="author" content="altlimit.org">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://altlimit.org/">
+    <meta property="og:title" content="{{if .title}}{{.title}} | {{end}}altlimit">
+    <meta property="og:description"
+        content="{{if .description}}{{.description}}{{else}}Empowering communities worldwide through compassion, action, and sustainable support.{{end}}">
+    <meta property="og:image" content="https://altlimit.org/img/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://altlimit.org/">
+    <meta property="twitter:title" content="{{if .title}}{{.title}} | {{end}}altlimit">
+    <meta property="twitter:description"
+        content="{{if .description}}{{.description}}{{else}}Empowering communities worldwide through compassion, action, and sustainable support.{{end}}">
+    <meta property="twitter:image" content="https://altlimit.org/img/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="icon" type="image/png" href="/img/favicon.png">
 </head>
 
 <body>
 
-    <nav>
-        <a href="#" class="logo-container">
-            <svg width="180" height="50" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                    <path
-                        d="M50 20C44.4772 20 40 24.4772 40 30C40 35.5228 44.4772 40 50 40C55.5228 40 60 35.5228 60 30C60 24.4772 55.5228 20 50 20Z"
-                        fill="#059669" />
-                    <path
-                        d="M30 45C24.4772 45 20 49.4772 20 55C20 60.5228 24.4772 65 30 65C35.5228 65 40 60.5228 40 55C40 49.4772 35.5228 45 30 45Z"
-                        fill="#34D399" />
-                    <path
-                        d="M70 45C64.4772 45 60 49.4772 60 55C60 60.5228 64.4772 65 70 65C75.5228 65 80 60.5228 80 55C80 49.4772 75.5228 45 70 45Z"
-                        fill="#34D399" />
-                    <path d="M50 45C44 55 35 70 35 80H65C65 70 56 55 50 45Z" fill="#059669" />
-                    <path d="M28 70C22 75 15 80 15 80H35C35 70 28 70 28 70Z" fill="#34D399" />
-                    <path d="M72 70C78 75 85 80 85 80H65C65 70 72 70 72 70Z" fill="#34D399" />
-                </g>
-                <text x="100" y="62" font-family="Outfit, sans-serif" font-weight="800" font-size="36"
-                    fill="#1e293b">altlimit<tspan fill="#059669">.org</tspan></text>
-            </svg>
-        </a>
-        <a href="#contact" class="btn-primary">Request Resources</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo-container">
+                <svg width="180" height="50" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-label="altlimit logo">
+                    <title>altlimit logo</title>
+                    <g>
+                        <path
+                            d="M50 20C44.4772 20 40 24.4772 40 30C40 35.5228 44.4772 40 50 40C55.5228 40 60 35.5228 60 30C60 24.4772 55.5228 20 50 20Z"
+                            fill="var(--primary)" />
+                        <path
+                            d="M30 45C24.4772 45 20 49.4772 20 55C20 60.5228 24.4772 65 30 65C35.5228 65 40 60.5228 40 55C40 49.4772 35.5228 45 30 45Z"
+                            fill="var(--secondary)" />
+                        <path
+                            d="M70 45C64.4772 45 60 49.4772 60 55C60 60.5228 64.4772 65 70 65C75.5228 65 80 60.5228 80 55C80 49.4772 75.5228 45 70 45Z"
+                            fill="var(--secondary)" />
+                        <path d="M50 45C44 55 35 70 35 80H65C65 70 56 55 50 45Z" fill="var(--primary)" />
+                        <path d="M28 70C22 75 15 80 15 80H35C35 70 28 70 28 70Z" fill="var(--secondary)" />
+                        <path d="M72 70C78 75 85 80 85 80H65C65 70 72 70 72 70Z" fill="var(--secondary)" />
+                    </g>
+                    <text x="100" y="62" font-family="Outfit, sans-serif" font-weight="800" font-size="36"
+                        fill="var(--dark)">altlimit<tspan fill="var(--primary)">.org</tspan></text>
+                </svg>
+            </a>
+            <div class="nav-links">
+                <a href="#mission">Mission</a>
+                <a href="#projects">Initiatives</a>
+                <a href="#contact" class="btn-primary">Get Involved</a>
+            </div>
+        </div>
     </nav>
 
-    {{template "content" .}}
+    <main>
+        {{template "content" .}}
+    </main>
 
     <footer>
-        <a href="https://altlimit.com" class="commercial-link">Visit altlimit.com for Commercial Inquiries</a>
-        <p class="copyright">&copy;
-            <script>document.write(new Date().getFullYear());</script> ALTLIMIT
-        </p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">altlimit<span class="dot">.</span>org</span>
+                <p>Building a better world, together.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://altlimit.com" class="commercial-link">Commercial Inquiries &rarr;</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy;
+                <script>document.write(new Date().getFullYear());</script> ALTLIMIT. All rights reserved.
+            </p>
+        </div>
     </footer>
 
 </body>
